@@ -1,0 +1,13 @@
+{
+  "name": "as26_automation",
+  "version": "1.0.0",
+  "description": "all about automation ui and api",
+  "main": "index.js",
+  "scripts": {},
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.57.0",
+    "@types/node": "^24.10.1"
+  }
+}
