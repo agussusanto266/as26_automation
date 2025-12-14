@@ -26,20 +26,31 @@ export default defineConfig({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
-    baseURL: 'https://dummyjson.com',
-    extraHTTPHeaders: {
-      'Content-Type': 'application/json',
-    },
+    // baseURL: 'https://dummyjson.com',
+    // extraHTTPHeaders: {
+    //   'Content-Type': 'application/json',
+    // },
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
+    // headless: false,
   },
 
   /* Configure projects for major browsers */
   projects: [
     {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      name: 'ui-chromium',
+      use: {
+        baseURL: 'https://www.saucedemo.com',
+        ...devices['Desktop Chrome'],
+      },
+    },
+    {
+      name: 'api-chromium',
+      use: {
+        baseURL: 'https://dummyjson.com',
+        ...devices['Desktop Chrome'],
+      },
     },
 
     // {
