@@ -1,4 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
+import test from 'node:test';
 
 /**
  * Read environment variables from file.
@@ -40,6 +41,7 @@ export default defineConfig({
   projects: [
     {
       name: 'ui-chromium',
+      testMatch: 'tests/ui/**/*.spec.ts',
       use: {
         baseURL: 'https://www.saucedemo.com',
         ...devices['Desktop Chrome'],
@@ -47,6 +49,7 @@ export default defineConfig({
     },
     {
       name: 'api-chromium',
+      testMatch: 'tests/api/**/*.spec.ts',
       use: {
         baseURL: 'https://dummyjson.com',
         ...devices['Desktop Chrome'],

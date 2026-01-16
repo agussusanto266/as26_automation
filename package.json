@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "all about automation ui and api",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test-ui-saucedemo": "playwright test tests/ui/saucedemo/",
+    "test-api-dummyJson": "playwright test tests/api/dummyJson/",
+    "test-report": "playwright show-report"
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
